@@ -9,7 +9,6 @@ import { Box,
     Heading,
     SimpleGrid,
     StackDivider,
-    useColorModeValue,
     Modal,
   ModalOverlay,
   ModalContent,
@@ -67,12 +66,7 @@ export default ({job}) => {
 
           <Stack
             spacing={{ base: 4, sm: 6 }}
-            direction={'column'}
-            divider={
-              <StackDivider
-                borderColor={useColorModeValue('gray.200', 'gray.600')}
-              />
-            }>
+            direction={'column'}>
             <Stack>
                 <Text>Hospital Name</Text>
             <Heading textAlign={`left`}>

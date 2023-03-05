@@ -6,7 +6,6 @@ import {
   Text,
   Button,
   Stack,
-  useColorModeValue,
   useBreakpointValue,
 } from "@chakra-ui/react";
 
@@ -14,8 +13,6 @@ export default function Navigation() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -32,7 +29,6 @@ export default function Navigation() {
             href={"/"}
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
           >
             ProofOfNurse
           </Text>

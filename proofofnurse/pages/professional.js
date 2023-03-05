@@ -8,7 +8,6 @@ import { Box,
     Heading,
     SimpleGrid,
     StackDivider,
-    useColorModeValue,
     Image, } from "@chakra-ui/react"
 
 export default function professional () {
@@ -44,14 +43,9 @@ export default function professional () {
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={'column'}
-            divider={
-              <StackDivider
-                borderColor={useColorModeValue('gray.200', 'gray.600')}
-              />
-            }>
+            >
             <VStack spacing={{ base: 4, sm: 6 }}>
               <Text
-                color={useColorModeValue('gray.500', 'gray.400')}
                 fontSize={'2xl'}
                 fontWeight={'300'}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
