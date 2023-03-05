@@ -1,3 +1,5 @@
+Smart Contract Deployed to 0x7ae8C5Faa17a1055Afc5Cc0d75C9EC3D077048Bc
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
