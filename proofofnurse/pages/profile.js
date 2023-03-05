@@ -33,9 +33,13 @@ export default function profile() {
         <Stack spacing={`20px`} w={'full'} maxW={'md'}>
         <Heading>Professional Profile</Heading>
         <FormControl marginBottom={`20px`}>
+        <FormLabel>Name</FormLabel>
         <Input isDisabled={true} marginBottom={`20px`} placeholder='Full name' variant={'flushed'} type='text' value={'Alice Chains'} onChange={(e) => {setFullname(e.target.value)}} />
+        <FormLabel>License ID</FormLabel>
         <Input isDisabled={true} marginBottom={`20px`} placeholder='License ID' variant={'flushed'} type='text' value={'8827AA'} onChange={(e) => {setLicenseID(e.target.value)}}  />
+        <FormLabel>Credential ID</FormLabel>
         <Input isDisabled={true} marginBottom={`20px`} placeholder='Employment Status' variant={'flushed'} type='text' value={'8JJIO87'} onChange={(e) => {setLicenseID(e.target.value)}}  />
+        <FormLabel>Certification ID</FormLabel>
         <Input isDisabled={true} marginBottom={`20px`} placeholder='Certification' variant={'flushed'} type='text' value={'877BVC'} onChange={(e) => {setCertification(e.target.value)}} />
         
         <Text>Verification Status:</Text>

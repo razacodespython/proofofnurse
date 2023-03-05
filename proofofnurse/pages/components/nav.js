@@ -28,6 +28,8 @@ export default function Navigation() {
         ></Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Text
+            as={CustomLink}
+            href={"/"}
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}

@@ -49,6 +49,8 @@ export default function signup() {
         <Input marginBottom={`20px`} placeholder='Certification Date' type={"date"} variant={'flushed'} value={date} onChange={(e) => {setDate(e.target.value)}}  />
         <Text marginBottom={`20px`}> Add Certificate <Box as={'span'}><AddIcon /> </Box></Text>
         <Button
+              as={CustomLink}
+              href={"/profile"}
               colorScheme={"green"}
               marginRight={"10px"}
               bg={"green.400"}
