@@ -106,7 +106,7 @@ export default function Home() {
             Security
           </Heading>
           <Text textAlign={"left"}>
-            Credentials can't be hacked and are stored decentral
+            Credentials cant be hacked and are stored decentral
           </Text>
         </GridItem>
         <GridItem w="100%" h="10">
@@ -165,7 +165,7 @@ export default function Home() {
             <Box as={"span"} color={"green.400"}>
               reduce costs
             </Box>{" "}
-            while ensuring your new hires' credibility
+            while ensuring your new hires credibility
           </Text>
         </Box>
       </Flex>

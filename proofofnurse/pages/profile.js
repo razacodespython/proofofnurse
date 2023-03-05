@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons'
 
-export default function profile() {
+export default function Profile() {
   const [fullName, setFullname] = useState("");
     const [employmentStatus, setEmploymentStatus] = useState("");
     const [licenseID, setLicenseID] = useState("");

@@ -27,7 +27,7 @@ import Abi from "../abi.json";
 
 const contractAddress = "0x7ae8C5Faa17a1055Afc5Cc0d75C9EC3D077048Bc";
 
-export default function signup() {
+export default function Signup() {
   const router = useRouter();
   const toast = useToast();
   const [fullName, setFullname] = useState("");
@@ -42,8 +42,7 @@ export default function signup() {
 
   const { signMessageAsync } = useSignMessage();
 
-  const { data, isSuccess: providerLoaded } = (typeof window !== "undefined" &&
-    useSigner()) || { data: undefined, isSuccess: false };
+  const { data, isSuccess: providerLoaded } = useSigner();
 
   const handleSignIn = async () => {
     try {

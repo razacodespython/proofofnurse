@@ -35,7 +35,7 @@ export const getStaticPaths = async () => {
     return {paths, fallback: false}
 }
 
-export default ({job}) => {
+const Listings = ({job}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return(
         <Container maxW={'7xl'}>
@@ -132,3 +132,5 @@ export default ({job}) => {
     </Container>
     )
 }
+
+export default Listings;
