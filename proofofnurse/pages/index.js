@@ -95,26 +95,26 @@ export default function Home() {
       gap={6} padding={"10%"} paddingTop={"0"} marginTop={"0"}>
         <GridItem w='100%' h='10'>
           <Heading size={"md"} textAlign={"left"}>
-            Benefit 1
+            Decrease Time
           </Heading>
           <Text textAlign={"left"}>
-            It lduis occaecat ex Lorem nostrud aliquip deserunt voluptate. Laboris mollit consectetur mollit minim sit esse.
+          Cut the time to get through the verification process to instant, by using verified credentials on chain
           </Text>
           </GridItem>
         <GridItem w='100%' h='10'>
         <Heading size={"md"} textAlign={"left"}>
-            Benefit 2
+            Security
           </Heading>
           <Text textAlign={"left"}>
-            It lduis occaecat ex Lorem nostrud aliquip deserunt voluptate. Laboris mollit consectetur mollit minim sit esse.
+          Credentials can't be hacked and are stored decentral
           </Text>
         </GridItem>
         <GridItem w='100%' h='10'>
         <Heading size={"md"} textAlign={"left"}>
-            Benefit 3
+            Data Protection
           </Heading>
           <Text textAlign={"left"}>
-            It lduis occaecat ex Lorem nostrud aliquip deserunt voluptate. Laboris mollit consectetur mollit minim sit esse.
+          Your personal data is not shared with hospitals, recruitment agencies, ect.
           </Text>
         </GridItem>
         </Grid>
@@ -123,9 +123,9 @@ export default function Home() {
           <Text
             color={"grey"}
             fontSize={"sm"}
-          >Culpa magna occaecat ex Lorem laborum eu.</Text>
+          >Using Social Logins</Text>
           <Text fontSize={"2xl"} fontWeight={"bold"}>
-            Ea quis ipsum id <Box as={"span"} color={"green.400"}>proident nulla laboris irure pariatur.</Box> Eu non magna cupidatat culpa consequat pariatur non nulla incididunt non in minim.
+            Anyone can use our platform <Box as={"span"} color={"green.400"}>and harness the power </Box> of decentralized identity.
             </Text>
           </Box>
           <Image
@@ -156,14 +156,14 @@ export default function Home() {
           <Text
             color={"grey"}
             fontSize={"sm"}
-          >Culpa magna occaecat ex Lorem laborum eu.</Text>
+          >Hire Faster</Text>
           <Text fontSize={"2xl"} fontWeight={"bold"}>
-            Ea quis ipsum id <Box as={"span"} color={"green.400"}>proident nulla laboris irure pariatur.</Box> Eu non magna cupidatat culpa consequat pariatur non nulla incididunt non in minim.
+            Save time <Box as={"span"} color={"green.400"}>reduce costs</Box> while ensuring your new hires' credibility
             </Text>
           </Box>
         </Flex>
         <Flex marginTop={"50px"} textAlign={"center"} direction={"column"} justifyContent={"center"}>
-        <Text fontWeight={"bold"} fontSize={"2xl"}>Ullamco occaecat aliqua labore consectetur labore mollit adipisicing veniam consectetur.</Text>
+        <Text fontWeight={"bold"} fontSize={"2xl"}>Create your credentials now and never worry about it again.</Text>
         <Button
               as={CustomLink}
               href="/signup"
