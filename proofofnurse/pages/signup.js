@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { ethers } from 'ethers';
 import CustomLink from './components/CustomLink';
 import {
   Button,
@@ -13,11 +15,18 @@ import {
   Image,
   Select,
   Text,
-  Box
+  Box,
+  useToast
 } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons'
 
+import Abi from "../abi.json";
+
+const contractAddress = "0x7ae8C5Faa17a1055Afc5Cc0d75C9EC3D077048Bc";
+
 export default function signup() {
+  const router = useRouter();
+  const toast = useToast();
   const [fullName, setFullname] = useState("");
     const [employmentStatus, setEmploymentStatus] = useState("");
     const [licenseID, setLicenseID] = useState("");
@@ -26,6 +35,38 @@ export default function signup() {
     console.log({employmentStatus, fullName, licenseID, certification, date})
     const handleChange = (event) => {
       setEmploymentStatus(event.target.value)
+    }
+    const mintNFT = async () => {
+      const { ethereum } = window;
+      if (ethereum) {
+        toast({
+          title: 'Creating Account and NFT.',
+          description: "Hang on, we're getting your account created right now!",
+          status: 'info',
+          duration: 9000,
+          isClosable: true,
+        })
+        const provider = new ethers.providers.Web3Provider(ethereum)
+        await provider.send("eth_requestAccounts", []);
+        const signer = provider.getSigner();
+        const address = await signer.getAddress();
+        const connectedContract = new ethers.Contract(contractAddress, Abi, signer)
+        console.log("minting")
+        const nft = await connectedContract.safeMint(address, Math.floor(Math.random() * 101))
+        console.log({ nft })
+        toast({
+          title: 'Account created.',
+          description: `We've created your account for you at hash ${nft.hash} please wait as we redirect you to your profile!`,
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        })
+        setTimeout(() => {
+          router.push("/profile");
+        }, "5000");
+      } else {
+        alert("No Wallet Found")
+      }
     }
   return (
     <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
@@ -49,8 +90,9 @@ export default function signup() {
         <Input marginBottom={`20px`} placeholder='Certification Date' type={"date"} variant={'flushed'} value={date} onChange={(e) => {setDate(e.target.value)}}  />
         <Text marginBottom={`20px`}> Add Certificate <Box as={'span'}><AddIcon /> </Box></Text>
         <Button
-              as={CustomLink}
-              href={"/profile"}
+              // as={CustomLink}
+              // href={"/profile"}
+              onClick={() => mintNFT()}
               colorScheme={"green"}
               marginRight={"10px"}
               bg={"green.400"}
